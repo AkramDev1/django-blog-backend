@@ -18,4 +18,6 @@ urlpatterns=[
     path('user', UserView.as_view()),
     path('logout', LogoutView.as_view()),
     
-] 
+]
+#     re_path(r'^post/SaveFile$', views.SaveFile)
+#  ] + static(settings.IMAGES_URL, document_root=settings.IMAGES_ROOT)

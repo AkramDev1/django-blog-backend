@@ -128,3 +128,12 @@ class LogoutView(APIView):
             'message': 'success'
         }
         return response
+
+
+#uploads image:
+@csrf_exempt
+def SaveFile(request):
+    file=request.FILES['myFile']
+    file_name = default_storage.save(file.name,file)
+
+    return JsonResponse(file_name,safe=False)

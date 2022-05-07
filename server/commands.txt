@@ -1,0 +1,2 @@
+docker build --tag python-django .    //create docker image
+docker run --publish 8000:8000 python-django   //create docker container
